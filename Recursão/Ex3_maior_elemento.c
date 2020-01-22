@@ -8,6 +8,7 @@ int maior(int *v, int n)
     }
     else
     {
+
         int elem = maior(v, n - 1);
 
         if (v[n - 1] > elem)
