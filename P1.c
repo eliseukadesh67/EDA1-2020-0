@@ -27,25 +27,35 @@ int main()
 {
     int d, a, s, m, code, mat, ap, maior;
     scanf("%d", &d);
-    int *disp = (int *)calloc(d, sizeof(int));
 
     while (scanf("%d %d %d", &a, &s, &m) != EOF)
     {
+        int *disp = (int *)calloc(d, sizeof(int));
+        maior = 0;
         while (m)
         {
+
             scanf("%d %d %d", &code, &mat, &ap);
+
+            for (int i = 0; i < d; i++)
+            {
+
+                if (i == code)
+                {
+                    disp[i] += (mat - ap);
+                }
+            }
 
             m--;
         }
 
         for (int i = 0; i < d; i++)
         {
-            if (i == code)
+            if (disp[i] > maior)
             {
-                disp[i] += mat - ap;
+                maior = disp[i];
             }
         }
-        maior = mai(disp, d);
 
         printf("%d/%d\n", s, a);
 
@@ -55,9 +65,11 @@ int main()
             {
                 printf("%d ", i);
             }
+
+            disp[i] = 0;
         }
 
-        printf("\n");
+        printf("\n\n");
 
         free(disp);
     }
