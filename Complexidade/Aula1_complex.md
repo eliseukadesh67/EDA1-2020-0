@@ -80,7 +80,7 @@ A notação big O, mede o comportamento assintótico da função, portanto é ad
 6. O(n^k), -> Polinomial (k>1, pode ser ruim para n grande).
 7. O(k^n), O(n!), O(n^n) -> Exponencial (Não aceitaveis)
 
-## Ckasses de complexidade
+## Classes de complexidade
 
 ### P (Polynomial-time) :
 
