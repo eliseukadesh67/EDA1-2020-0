@@ -1,20 +1,22 @@
 #include <stdio.h>
 
-int cont_par(char *str, int cont)
+int cont_par(char *str)
 {
-    if (*str)
+    if (*(str + 2))
     {
 
         if (*str == *(str + 2))
         {
-            cont++;
+            return cont_par(str + 1) + 1;
         }
-
-        return cont_par(str + 1, cont);
+        else
+        {
+            return cont_par(str + 1);
+        }
     }
     else
     {
-        return cont;
+        return 0;
     }
 }
 
@@ -22,6 +24,6 @@ int main()
 {
     char str[200];
     scanf("%s", str);
-    printf("%d\n", cont_par(str, 0));
+    printf("%d\n", cont_par(str));
     return 0;
 }
