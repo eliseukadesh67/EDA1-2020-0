@@ -92,4 +92,4 @@ Problemas para quais não se conhece um algoritmo polinomial para sua resoluçã
 
 ## Bibliografia
 
-- [Algoritmos - Teoria e prática, Thomas H.Cormem](ttp://www.inf.ufrgs.br/~tsrodrigues/utilidades/cormem.pdf)
+- [Algoritmos - Teoria e prática, Thomas H.Cormem](http://www.inf.ufrgs.br/~tsrodrigues/utilidades/cormem.pdf)
