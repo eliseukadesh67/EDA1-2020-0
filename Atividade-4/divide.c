@@ -63,6 +63,9 @@ void divide_lista(celula *l, celula *l1, celula *l2)
     //imprime(l);
     while (p->prox)
     {
+
+        celula *paux = p->prox;
+
         if (((p->prox->dado) % 2) == 0)
         {
             //printf("Par %d\n", p->prox->dado);

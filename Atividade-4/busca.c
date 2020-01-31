@@ -9,6 +9,7 @@ typedef struct celula
 
 celula *busca(celula *le, int x);
 celula *busca_rec(celula *le, int x);
+
 celula *new_node();
 celula *init_list();
 void add_node(celula *le, int x);
@@ -43,7 +44,7 @@ void add_node(celula *le, int x)
 void free_list(celula *head)
 {
     celula *p, *aux;
-    p = head;
+    p = head->prox;
 
     while (p)
     {
@@ -55,32 +56,31 @@ void free_list(celula *head)
 }
 celula *busca(celula *le, int x)
 {
-    celula *aux = le;
-    while (aux->prox)
+    celula *aux = le->prox;
+
+    while (aux)
     {
-        if (aux->prox->dado == x)
+        if (aux->dado == x)
         {
-            return aux->prox;
+            return aux;
         }
-        else
-        {
-            aux = aux->prox;
-        }
+
+        aux = aux->prox;
     }
+    return aux;
 }
 celula *busca_rec(celula *le, int x)
 {
     celula *aux = le;
-
-    if (aux->prox == NULL)
+    if (aux == NULL)
     {
-        return NULL;
+        return aux;
     }
     else
     {
-        if (aux->prox->dado == x)
+        if (aux->dado == x)
         {
-            return aux->prox;
+            return aux;
         }
         else
         {
@@ -101,15 +101,27 @@ void imprime(celula *le)
     printf("NULL\n");
 }
 
-int main()
+/* int main()
 {
-    celula *ocurrence;
     celula *le = init_list();
+    celula *ocurrence;
     add_node(le, 1);
     add_node(le, 2);
     add_node(le, 3);
     add_node(le, 6);
     add_node(le, 4);
+    imprime(le);
+    ocurrence = busca(le, 4);
+    if (ocurrence)
+    {
+        printf("%d Encontrado.\n", ocurrence->dado);
+    }
+    else
+    {
+        printf("Não Encontrado.\n");
+    }
     free_list(le);
+    printf("Desalocando a cabeça.\n");
+    free(le);
     return 0;
-}
+} */

@@ -1,0 +1,33 @@
+1 -> 7 -> 9 -> 10 -> NULL
+2 -> 3 -> 8 -> NULL
+NULL
+l1 atual : 7
+l3 atual : 7
+l1 atual : 9
+l3 atual : 9
+Lista 1 : 1 -> 2 -> 3 -> 7 -> 8 -> 9 -> 10 -> NULL
+Lista 2 : 2 -> 3 -> 7 -> 8 -> 9 -> 10 -> NULL
+Lista 3 : 1 -> 2 -> 3 -> 7 -> 8 -> 9 -> 10 -> NULL
+Desalocando 1
+Desalocando 2
+Desalocando 3
+Desalocando 7
+Desalocando 8
+Desalocando 9
+Desalocando 10
+Lista 1 limpa.
+Desalocando 515461824
+Desalocando 515461952
+Desalocando 515461984
+Desalocando 515461856
+Desalocando 515462016
+Desalocando 515461888
+Lista 2 limpa.
+Desalocando 0
+Desalocando 515461712
+Desalocando 515461936
+Desalocando 515461968
+Desalocando 515461840
+Desalocando 515462000
+Desalocando 515461872
+Lista 3 limpa.
