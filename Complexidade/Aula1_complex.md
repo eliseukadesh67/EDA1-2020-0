@@ -89,3 +89,7 @@ Problemas que conhece um algortimo polinomial para sua resolução.
 ### NP (Nondeterministc-polynomial) :
 
 Problemas para quais não se conhece um algoritmo polinomial para sua resolução, mas há um algoritmo "polinomial" para verificar se uma instância é solução de um problema.
+
+## Bibliografia
+
+- [Algoritmos - Teoria e prática, Thomas H.Cormem](http://www.inf.ufrgs.br/~tsrodrigues/utilidades/cormem.pdf)
