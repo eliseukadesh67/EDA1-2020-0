@@ -66,37 +66,40 @@ void imprime(celula *le)
 }
 void mescla_listas(celula *l1, celula *l2, celula *l3)
 {
-    l2 = l2->prox, l1 = l1->prox;
-    while (l1 && l2)
+    celula *aux1 = l1;
+    celula *aux2 = l2;
+    celula *aux3 = l3;
+    aux2 = aux2->prox, aux1 = aux1->prox;
+    while (aux1 && aux2)
     {
-        if (l1->dado < l2->dado)
+        if (aux1->dado < aux2->dado)
         {
-            printf("l1 atual : %d\n", l1->prox->dado);
-            l3->prox = l1;
-            l1 = l1->prox;
-            l3 = l3->prox;
-            printf("l3 atual : %d\n", l3->prox->dado);
+            //printf("l1 atual : %d\n", aux1->prox->dado);
+            aux3->prox = aux1;
+            aux1 = aux1->prox;
+            aux3 = aux3->prox;
+            //printf("l3 atual : %d\n", l3->prox->dado);
         }
         else
         {
-            l3->prox = l2;
-            l2 = l2->prox;
-            l3 = l3->prox;
+            aux3->prox = aux2;
+            aux2 = aux2->prox;
+            aux3 = aux3->prox;
         }
     }
 
-    if (l1)
+    if (aux1)
     {
-        l3->prox = l1;
+        aux3->prox = aux1;
     }
 
-    if (l2)
+    if (aux2)
     {
-        l3->prox = l2;
+        aux3->prox = aux2;
     }
 }
 
-int main()
+/* int main()
 {
     celula *l1 = init_list();
     celula *l2 = init_list();
@@ -129,4 +132,4 @@ int main()
     printf("Lista 3 limpa.\n");
 
     return 0;
-}
+} */
