@@ -42,28 +42,25 @@ void push(Pno *topo, item x)
     novo->anterior = topo->anterior;
     topo->anterior = novo;
 }
-Pno *pop(Pno *topo)
+item pop(Pno *topo)
 {
     if (topo->anterior == NULL)
     {
-        return NULL;
+        exit(1);
     }
 
-    Pno *top = topo->anterior;
-    free(top);
+    item top_val = topo->anterior->dado;
+    free(topo->anterior);
 
-    return topo;
+    return top_val;
 }
 void free_stack(Pno *top)
 {
-    if (pop(top)->anterior == NULL)
+    while (top->anterior)
     {
-        return;
-    }
-    else
-    {
-        free_stack(top->anterior);
+        pop(top);
     }
 
-    //free(top);
+    free(top);
 }
+// Ta errado!
