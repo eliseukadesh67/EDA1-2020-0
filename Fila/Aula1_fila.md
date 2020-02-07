@@ -132,6 +132,8 @@ A incialização é igual a fila implementada com vetores.
             f->first++;
             
             f->first = (f->first+1)%f->N;
+
+            return 1;
         }// Complexidade 0(1);
 
 ## 3. Inserção
