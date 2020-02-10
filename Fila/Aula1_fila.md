@@ -48,7 +48,7 @@ Implementa-se 4 operações:
         void enfileira(fila *f, item x){
             if(f->last==f->N){
                 f->N *= 2;
-                f->dados = realloc(f->dados, f->N*sizeof(fila));
+                f->dados = realloc(f->dados, f->N*sizeof(item));
                 
                 if(f->dados==NULL){
                     exit(1);
@@ -115,7 +115,7 @@ Para resolvermos, redefinimos o conceito de fila cheia de duas maneiras:
 
 1. A fila está cheia quando primeiro = 0, e quando o ultimo = N-1; 
 
-2. A fila está cheia quando o primeiro>0, e o utlimo = primeiro-1;
+2. A fila está cheia quando o primeiro>0, e o ultimo = primeiro-1;
 
 Ou seja: (ultimo+1)%N = P;
 
