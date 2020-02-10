@@ -36,3 +36,30 @@ Um algoritmo de ordenação é dito estável quando preserva a ordem original de
 
 ## 2. Selection Sort 
 
+    void selection_sort(int *v, int n){
+        for(int i = 0, i<n, i++){
+            int min = i;
+            for(int i+1 = 0,j<n,j++){
+                if(v[j]<v[min]){
+                    min = j;
+                }
+
+                troca(&v[min], &v[i]);
+            }
+        }
+    }
+
+A solução recursiva seria :
+
+        void selection_sort_rec(int *v, int n, int i){
+            if(i<n-1){
+                int min=1;
+                for(int j=i+1, j<n;j++){
+                    if(v[j]<v[min]){
+                        min = j;
+                    }
+                    troca(&v[min], &v[i]);
+                    selectiom_sort_rec(v, n, i+1);
+                }
+            }
+        }
