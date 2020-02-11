@@ -48,7 +48,7 @@ int enfileira(fila *f, int x)
                     cont_fim--;
                 }
 
-                f->p = cont_fim;
+                f->p = cont_fim + 1;
             }
         }
     }
