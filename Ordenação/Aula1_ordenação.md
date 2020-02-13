@@ -59,7 +59,7 @@ A solução recursiva seria :
                         min = j;
                     }
                     troca(&v[min], &v[i]);
-                    selectiom_sort_rec(v, n, i+1);
+                    selection_sort_rec(v, n, i+1);
                 }
             }
         }
